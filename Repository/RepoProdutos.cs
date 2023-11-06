@@ -7,7 +7,7 @@ public class RepoProdutos : IRepoProdutos
 {
     public async Task<bool> AdicionarProdutos(ProdutosDisponiveis model)
     {
-          try
+        try
         {
             using var db = new DataContext();
             db.ProdutosEmEstoque.AddRange(model);
