@@ -24,6 +24,7 @@ jobs:
       run: dotnet restore
   
   build:
+
       runs-on: ubuntu-latest
       steps:
       - uses: actions/checkout@v3
@@ -33,8 +34,7 @@ jobs:
           dotnet-version: 7.0.x
       - name: Build API 
         run: dotnet build
-        working-directory: ./projeto.service
-
+  
   docker:
       runs-on: ubuntu-latest
       needs: build
