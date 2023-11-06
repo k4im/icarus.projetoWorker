@@ -7,10 +7,8 @@ public class Worker : BackgroundService
     private readonly IServiceProvider _provider;
 
     public Worker(IServiceProvider provider)
-    {
-        _provider = provider;
-    }
-
+        => _provider = provider;
+    
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
         while (!stoppingToken.IsCancellationRequested)
