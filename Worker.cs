@@ -19,7 +19,7 @@ public class Worker : BackgroundService
             {
                 using var scope = _provider.CreateScope();
                 IQueueConsumer consumer = scope.ServiceProvider.GetService<IQueueConsumer>();
-                consumer.VerificarFilaComMensagens();        
+                consumer.VerificarFila();        
             }
             catch(Exception ex) {
                 Console.WriteLine(ex.Message);

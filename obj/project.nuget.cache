@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "wo0OpWJeP1v+x/iA3QaYAtqUF6Ii6Abue1DhP8CvseIHxOXjMor6yor0WMWx2EKTcxXj46wBVljBsoCpUrvAag==",
+  "dgSpecHash": "UovY6ZdTaQqg8xqJ4aDuxOLFG4HxTy6pSWQoPDFMZNoNHJoLtNnzXsClYTZIIxUENs9BxvlYpqw45eytHvDbkA==",
   "success": true,
   "projectFilePath": "/home/joao/github/icarus/icarus.projetoWorker/icarus.projetoWorker.csproj",
   "expectedPackageFiles": [
@@ -36,6 +36,7 @@
     "/home/joao/.nuget/packages/microsoft.extensions.options.configurationextensions/7.0.0/microsoft.extensions.options.configurationextensions.7.0.0.nupkg.sha512",
     "/home/joao/.nuget/packages/microsoft.extensions.primitives/7.0.0/microsoft.extensions.primitives.7.0.0.nupkg.sha512",
     "/home/joao/.nuget/packages/mysqlconnector/2.2.5/mysqlconnector.2.2.5.nupkg.sha512",
+    "/home/joao/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512",
     "/home/joao/.nuget/packages/pomelo.entityframeworkcore.mysql/7.0.0/pomelo.entityframeworkcore.mysql.7.0.0.nupkg.sha512",
     "/home/joao/.nuget/packages/rabbitmq.client/6.6.0/rabbitmq.client.6.6.0.nupkg.sha512",
     "/home/joao/.nuget/packages/system.diagnostics.diagnosticsource/7.0.1/system.diagnostics.diagnosticsource.7.0.1.nupkg.sha512",
