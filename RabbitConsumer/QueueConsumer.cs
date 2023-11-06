@@ -116,5 +116,3 @@ public class QueueConsumer : ConsumerBase, IQueueConsumer
     void RabbitMQFailed(object sender, ShutdownEventArgs e)
         => Console.WriteLine($"--> Não foi possivel se conectar ao Message Bus: {e}");
 }
-
-
