@@ -1,4 +1,6 @@
-name: Docker Image CI
+# This workflow will build a .NET project
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
+name: .NET
 
 on:
   push:
@@ -7,12 +9,50 @@ on:
     branches: [ "main" ]
 
 jobs:
-
-  build:
+  restore:
 
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v3
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+  
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 7.0.x
+    - name: Restore dependencies
+      run: dotnet restore
+  
+  build:
+      runs-on: ubuntu-latest
+      needs: test
+      steps:
+      - uses: actions/checkout@v3
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: 7.0.x
+      - name: Build API 
+        run: dotnet build
+        working-directory: ./projeto.service
+
+  docker:
+      runs-on: ubuntu-latest
+      needs: build
+      steps:
+      - uses: actions/checkout@v3
+      
+      - name: Login to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Set up Docker Buildx  
+        uses: docker/setup-buildx-action@v2
+
+      - name: Build image 
+        run: docker build . --file Dockerfile --tag ${{ secrets.DOCKERHUB_USERNAME }}/worker:v0.1
+
+      - name: Pushing image on docker hub 
+        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/worker:v0.1
