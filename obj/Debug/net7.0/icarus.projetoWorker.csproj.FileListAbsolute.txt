@@ -52,3 +52,4 @@
 /home/joao/github/icarus/icarus.projetoWorker/obj/Debug/net7.0/icarus.projetoWorker.pdb
 /home/joao/github/icarus/icarus.projetoWorker/obj/Debug/net7.0/icarus.projetoWorker.genruntimeconfig.cache
 /home/joao/github/icarus/icarus.projetoWorker/obj/Debug/net7.0/ref/icarus.projetoWorker.dll
+/home/joao/github/icarus/icarus.projetoWorker/bin/Debug/net7.0/Newtonsoft.Json.dll
